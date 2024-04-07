@@ -33,7 +33,7 @@ Set up the following routes. Make sure to return JSON data in the specified form
 
 Returns a list of restaurants in the following JSON format:
 
-
+```json
 [
   {
     "id": 1,
@@ -46,6 +46,7 @@ Returns a list of restaurants in the following JSON format:
     "address": "Westgate Mall, Mwanzi Road, Nrb 100"
   }
 ]
+```
 
 #### GET /restaurants/:id
 
@@ -53,6 +54,7 @@ Links to an external site.
 
 If the Restaurant exists, return JSON data in the format below:
 
+```json
 {
   "id": 1,
   "name": "Dominion Pizza",
@@ -70,9 +72,12 @@ If the Restaurant exists, return JSON data in the format below:
     }
   ]
 }
+```
 
 If the Restaurant does not exist, return the following JSON data, along with the appropriate HTTP status code:
 
+```json
 {
   "error": "Restaurant not found"
 }
+```
