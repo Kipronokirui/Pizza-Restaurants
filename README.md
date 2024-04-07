@@ -12,7 +12,6 @@ You are required to create the following relationships in your database:
 
 Begin by creating the necessary models and migrations for the specified database tables.
 
-![Domain](domain.png)
 
 #### Validations
 
@@ -46,3 +45,38 @@ Returns a list of restaurants in the following JSON format:
     "address": "Westgate Mall, Mwanzi Road, Nrb 100"
   }
 ]
+
+
+#### GET /restaurants
+
+
+#### GET /restaurants/:id
+
+Links to an external site.
+
+If the Restaurant exists, return JSON data in the format below:
+
+{
+  "id": 1,
+  "name": "Dominion Pizza",
+  "address": "Good Italian, Ngong Road, 5th Avenue",
+  "pizzas": [
+    {
+      "id": 1,
+      "name": "Cheese",
+      "ingredients": "Dough, Tomato Sauce, Cheese"
+    },
+    {
+      "id": 2,
+      "name": "Pepperoni",
+      "ingredients": "Dough, Tomato Sauce, Cheese, Pepperoni"
+    }
+  ]
+}
+
+If the Restaurant does not exist, return the following JSON data, along with the appropriate HTTP status code:
+
+{
+  "error": "Restaurant not found"
+}
+
