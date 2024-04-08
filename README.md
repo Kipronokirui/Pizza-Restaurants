@@ -12,7 +12,6 @@ You are required to create the following relationships in your database:
 
 Begin by creating the necessary models and migrations for the specified database tables.
 
-![Domain](domain.png)
 
 #### Validations
 
@@ -81,3 +80,10 @@ If the Restaurant does not exist, return the following JSON data, along with the
   "error": "Restaurant not found"
 }
 ```
+
+## Running the application
+  - cd server
+  - flask db init
+  - flask db migrate -m 'initial migration'
+  - flask db upgrade head
+  - python seed.py
