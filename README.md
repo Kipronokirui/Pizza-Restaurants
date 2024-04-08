@@ -80,6 +80,48 @@ If the Restaurant does not exist, return the following JSON data, along with the
   "error": "Restaurant not found"
 }
 ```
+#### GET /pizzas
+
+Return JSON data in the format below:
+```json
+[
+  {
+    "id": 1,
+    "name": "Cheese",
+    "ingredients": "Dough, Tomato Sauce, Cheese"
+  },
+  {
+    "id": 2,
+    "name": "Pepperoni",
+    "ingredients": "Dough, Tomato Sauce, Cheese, Pepperoni"
+  }
+]
+```
+#### POST /restaurant_pizzas
+
+This route should create a new RestaurantPizza that is associated with an existing Pizza and Restaurant. It should accept an object with the following properties in the body of the request:
+```json
+{
+  "price": 5,
+  "pizza_id": 1,
+  "restaurant_id": 3
+}
+```
+If the RestaurantPizza is created successfully, send back a response with the data related to the Pizza:
+```json
+{
+  "id": 1,
+  "name": "Cheese",
+  "ingredients": "Dough, Tomato Sauce, Cheese"
+}
+```
+
+If the RestaurantPizza is not created successfully, return the following JSON data, along with the appropriate HTTP status code:
+```json
+{
+  "errors": ["validation errors"]
+}
+```
 
 ## Running the application
   - cd server
